@@ -1,0 +1,118 @@
+#!/bin/bash
+#tells the system what interpreter to use
+
+#to make the file executable, type chmod 755 hello_world in terminal
+#755 - Owner can read, write execute; the group and everyone else can only read and execute
+
+echo 'Hello World' #prints hello world in the terminal
+
+#Variables
+num1=21 #can't have whitespace on either side of the = sign
+str="asd"
+echo "11 + 10 = $num1" #put a $ in front of a variable when it's in a string
+
+#Constants
+declare -r NUM2=3
+
+#Arithmetic
+num3=$((NUM2 + num1)) #to perform arithmetic, you need $(())
+num4=$((NUM2 - num1))
+num5=$((NUM2 * num1))
+num6=$((num1 / NUM2))
+
+echo $num3
+echo $num4
+echo $num5
+echo $num6
+
+#Adding floats
+# Use Python to add floats
+num7=1.2
+num8=3.4
+num9=$(python -c "print $num7+$num8") #$() executes the command in the () 
+echo $num9
+
+#Printing multiple lines using a here script
+#cat << END #if you write <<- instead of <<, then bash will ignore the leading tabs
+#This text
+#prints on
+#many lines
+#END
+
+#functions
+getDate() 
+{
+    echo -n "Today's date is: "
+    date #gives the current date
+}
+getDate
+
+computeSum()
+{
+    local num1=$1 #$1 indicates the 1st positional parameter
+    local num2=$2
+    local sum=$((num1 + num2))
+    echo $sum
+}
+sum=$(computeSum 4 2)
+echo $sum	
+
+#Conditionals
+sum=19
+#need a space after the left and before the right bracket
+if [ $((9 + 10)) -eq $sum ] #others include ne,gt,ge,le
+then
+    echo "9 + 10 = $sum"
+elif [ $((9 + 10)) -lt $sum ]
+then
+    echo "9 + 10 < $sum"
+else
+    echo "9 + 10 > $sum"
+fi
+
+if ((sum == 19)) #another format for conditionals
+then
+    echo "Your number equals 19"
+fi
+
+if (( ((9 < 10)) && ((11 > 10)) )) #in previous format, it would be -o or -a
+then
+    echo "10 is greater than 9 and less than 11"
+fi
+
+#File Testing
+if [ -f "./test" ] #checks if test is a file
+then
+    echo "test is a file"
+elif [ -d "./test"] #checks if test is a directory
+then
+    echo "test is a directory"
+fi
+
+#While Loop
+num=10
+while [ $num -ge 0 ]
+do
+    echo "$num"
+    num=$((num - 1))
+done
+
+#for loop
+for ((i = 0; i<10; i+=1))
+do
+    echo $i
+done
+
+#Arrays- Bash arrays can only have one dimension
+nums=(1.2 1.3 1.4 1.5)
+echo "${nums[0]}"
+nums[4]=1.6 # adds number to array
+nums+=(1.7 1.8) # adds a group to the array
+echo "${nums[@]}" # prints all the values in the array
+echo "${#nums[@]}" #gives the length of the array
+unset 'nums[0]' # deletes element
+echo "${nums[@]}"
+unset nums # deletes array
+echo "${nums[@]}"
+
+ls > test
