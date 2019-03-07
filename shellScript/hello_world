@@ -11,9 +11,6 @@ echo 'Hello World' #prints hello world in the terminal
 #str="asd"
 #echo "11 + 10 = $num1" #put a $ in front of a variable when it's in a string
 
-#Constants
-#declare -r NUM2=3
-
 #Arithmetic
 #num3=$((NUM2 + num1)) #to perform arithmetic, you need $(())
 #num4=$((NUM2 - num1))
@@ -24,10 +21,15 @@ echo 'Hello World' #prints hello world in the terminal
 # echo $num5
 # echo $num6
 
+#Constants
+#declare -r NUM2=3
+#NUM2=4
+
 # Adding floats
 # Use Python to add floats
-# num7=1.2
-# num8=3.4
+#num7=1.2
+#num8=3.4
+#echo $((num7 + num8))
 # num9=$(python -c "print $num7+$num8") #$() executes the command in the () 
 # echo $num9
 
