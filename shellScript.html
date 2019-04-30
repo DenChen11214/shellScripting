@@ -36,7 +36,10 @@
             </div>
             <div class = "collapse navbar-collapse" id = "collapsibleNavbar">
                <ul class="navbar-nav">
-                  <li class = "nav-item"><a class = "nav-link" href="#gen">General Info(Vincent put some stuff here?/make more categories)</a></li>
+                  <li class = "nav-item"><a class = "nav-link" href="#gen">Introduction</a></li>
+				  <li class = "nav-item"><a class = "nav-link" href="#use">Uses</a></li>
+				  <li class = "nav-item"><a class = "nav-link" href="#adv">Advantages</a></li>
+				  <li class = "nav-item"><a class = "nav-link" href="#dav">Disadvantages</a></li>
                   <li class = "nav-item"><a class = "nav-link" href="#var">Variables</a></li>
                   <li class = "nav-item"><a class = "nav-link" href="#ari">Arithmetic</a></li>
                   <li class = "nav-item"><a class = "nav-link" href="#con">Constants & Floats</a></li>
@@ -44,13 +47,58 @@
                   <li class = "nav-item"><a class = "nav-link" href="#fun">Functions</a></li>
                   <li class = "nav-item"><a class = "nav-link" href="#cond">Conditionals & Loops</a></li>
                   <li class = "nav-item"><a class = "nav-link" href="#arr">Arrays</a></li>
+				  <li class = "nav-item"><a class = "nav-link" href="#sor">Sources and More Info</a></li>
                </ul>
             </div>
          </div>
       </nav>
-      <div class="container">
-        <div class = "general" id = "gen">
+
+      <div class="container"><br><br>
+        <div class = "introduction" id = "gen">
           <p>
+            <h2>What is Shell Scripting</h2>
+			<div><br>
+			A shell script is the terminology for a computer program that can be run by the Unix shell. (BASH CSH KSH)<br>
+			- What you can run shell scripts, you can run in the terminal.<br><br>
+			Automated execution of code in an operating system shell.<br>
+			Other references depend on operating systems:<br>
+			- Batch Files (MSDos-Win95)<br>
+			- Command Procedures (OpenVMS)<br><br>
+			Runs on non-extension files.<br>
+			</div><br>
+          </p>
+        </div>
+		<div class = "uses" id = "use">
+          <p>
+            <h2>Uses</h2>
+			<div><br>
+			Program command line segments in chunks, creating shortcuts for shell commands.<br>
+			Allows a convenient method to execute system commands.<br>
+			- Specifications and post-processing properties of the shell all apply naturally while still behaving as a normal Unix command.<br>
+			</div><br>
+          </p>
+        </div>
+		<div class = "advantages" id = "adv">
+          <p>
+            <h2>Advantages</h2>
+			<div><br>
+			The commands & syntax are exactly the same as what you would input into a terminal.<br>
+			Writing a shell script for a program is generally quicker than equivalent code for other languages.<br>
+			Easy file selection, debugging, etc.<br>
+			</div><br>
+          </p>
+        </div>
+		<div class = "disadvantages" id = "dav">
+          <p>
+            <h2>Disadvantages</h2>
+			<div><br>
+			Be careful!<br>
+			Commands such as rm, cp, mv differ from other commands with just a single letter.<br>
+			With typos, you can *accidentally* break your system.<br>
+			Likewise, * / vs */ <br>
+			Shell commands execute slowly.<br>
+			Compatibility with different platforms.<br>
+			</div><br>
           </p>
         </div>
         <div class = "variables" id = "var">
@@ -282,9 +330,10 @@
         </div>
         <div class = "arrays" id = "arr">
           <p>
-            <h2>Arrays- Bash arrays can only have one dimension</h2>
+            <h2>Arrays</h2>
             <pre><code>
             <div class = "code">
+            - Bash arrays can only have one dimension
             nums=(1.2 1.3 1.4 1.5) - Instantiate arrays with elements inside ()
             echo "${nums[0]}" - Prints the first element in the array
             nums[4]=1.6 -  Adds number to array
@@ -309,6 +358,17 @@
             </code></pre>
           </p>
         </div>
-
+		<div class = "sources" id = "sor">
+          <p>
+            <h2>Want to Learn More?</h2>
+			<div><br>
+			<a href="http://www.newthinktank.com/2016/06/shell-scripting-tutorial/">New Think Tank</a><br>
+			<a href="https://www.shellscript.sh/">Shell Script</a><br>
+			<a href="linuxcommand.org/lc3_writing_shell_scripts.php">Linux Command</a><br>
+			<a href="https://www.geeksforgeeks.org/introduction-linux-shell-shell-scripting/">Geeks For Geeks</a><br>
+			</div><br>
+          </p>
+        </div>
+	  </div>
    </body>
 </html>
